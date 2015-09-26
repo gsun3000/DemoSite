@@ -14,13 +14,27 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <description>My Company's eCommerce Website</description>
-    <repositories>
-        <repository>
+    <!--<repositories>-->
+
+        <!--<repository>
             <id>public snapshots</id>
             <name>public snapshots</name>
             <url>http://nexus.broadleafcommerce.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-    </repositories>
+        </repository>-->
+
+        <!--<repository>
+            <id>triptiny-nexus</id>
+            <name>triptiny nexus</name>
+            <url>http://nexus.triptiny.com:8081/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>-->
+
+    <!--</repositories>-->
     <build>
         <pluginManagement>
             <plugins>
@@ -312,4 +326,16 @@
         <module>core</module>
         <module>site</module>
     </modules>
+
+    <repositories>
+
+        <repository>
+            <id>triptiny-nexus</id>
+            <!--<username>deployment</username>-->
+            <!--<password>Test.1234</password>-->
+            <url>http://nexus.triptiny.com:8081/nexus/content/groups/public</url>
+        </repository>
+
+    </repositories>
+
 </project>
