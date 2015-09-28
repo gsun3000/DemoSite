@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <description>My Company's eCommerce Website</description>
-    <!--<repositories>-->
+    <repositories>
 
         <!--<repository>
             <id>public snapshots</id>
@@ -34,7 +34,14 @@
             </snapshots>
         </repository>-->
 
-    <!--</repositories>-->
+        <repository>
+            <id>triptiny-nexus</id>
+            <!--<username>deployment</username>-->
+            <!--<password>Test.1234</password>-->
+            <url>http://nexus.triptiny.com:8081/nexus/content/groups/public</url>
+        </repository>
+
+    </repositories>
     <build>
         <pluginManagement>
             <plugins>
@@ -290,6 +297,7 @@
                 <type>jar</type>
                 <scope>compile</scope>
             </dependency>
+
             <dependency>
                 <groupId>commons-dbcp</groupId>
                 <artifactId>commons-dbcp</artifactId>
@@ -326,16 +334,5 @@
         <module>core</module>
         <module>site</module>
     </modules>
-
-    <repositories>
-
-        <repository>
-            <id>triptiny-nexus</id>
-            <!--<username>deployment</username>-->
-            <!--<password>Test.1234</password>-->
-            <url>http://nexus.triptiny.com:8081/nexus/content/groups/public</url>
-        </repository>
-
-    </repositories>
 
 </project>
